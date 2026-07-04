@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,24 +18,61 @@
         .btn {
             background: #fff; color: #764ba2; padding: 15px 40px; 
             text-decoration: none; border-radius: 50px; display: inline-block; 
-            margin-top: 30px; font-weight: 700; transition:<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ijaz Ul Haq | Web Developer & Digital Creator</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
-        body { background: #0a0a0a; color: #fff; }
-        
-        header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            padding: 120px 20px;
-            text-align: center;
+            margin-top: 30px; font-weight: 700; transition: 0.3s;
         }
-        header h1 { font-size: 60px; font-weight: 800; margin-bottom: 10px; }
-        header p { font-size: 22px; color: #e0e0e0; }
-        .btn {
-            background: #fff; color: #764ba2; padding: 15px 40px; 
-            text-decoration: none; border-radius: 50px; display: inline-block; 
-            margin-top: 30px; font-weight: 700; transition:
+        .btn:hover { transform: scale(1.05); box-shadow: 0 10px 30px rgba(255,255,255,0.3); }
+
+        .container { max-width: 1100px; margin: auto; padding: 80px 20px; }
+        h2 { font-size: 40px; text-align: center; margin-bottom: 50px; color: #667eea; }
+        
+        .skills { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+        .skill-box {
+            background: #1a1a1a; padding: 30px; border-radius: 15px; 
+            width: 300px; text-align: center; border: 1px solid #333;
+            transition: 0.3s;
+        }
+        .skill-box:hover { transform: translateY(-10px); border-color: #667eea; }
+
+        footer { background: #000; text-align: center; padding: 30px; color: #888; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Ijaz Ul Haq</h1>
+        <p>Web Developer | Digital Creator | UI/UX Designer</p>
+        <a href="mailto:youremail@gmail.com" class="btn">Hire Me</a>
+    </header>
+
+    <div class="container">
+        <h2>About Me</h2>
+        <p style="text-align:center; font-size:18px; line-height:1.8;">
+            I am a passionate Web Developer from Peshawar, PK. I create modern, fast, 
+            and beautiful websites that help businesses grow online. Let's build something amazing together.
+        </p>
+    </div>
+
+    <div class="container">
+        <h2>My Skills</h2>
+        <div class="skills">
+            <div class="skill-box">
+                <h3>Web Development</h3>
+                <p>HTML, CSS, JavaScript, Responsive Design</p>
+            </div>
+            <div class="skill-box">
+                <h3>UI/UX Design</h3>
+                <p>Modern & Creative Website Interfaces</p>
+            </div>
+            <div class="skill-box">
+                <h3>Digital Marketing</h3>
+                <p>Grow your brand online</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 Ijaz Ul Haq. All Rights Reserved. | Peshawar, Pakistan</p>
+    </footer>
+
+</body>
+</html>
