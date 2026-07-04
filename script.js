@@ -1,71 +1,56 @@
-// ==============================
-// Premium Portfolio JavaScript
-// ==============================
+// =========================
+// Navbar Active Link
+// =========================
 
-// Smooth Scroll
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener("click", function (e) {
-        e.preventDefault();
+const navLinks = document.querySelectorAll(".nav-links a");
 
-        const target = document.querySelector(this.getAttribute("href"));
+navLinks.forEach(link => {
+    link.addEventListener("click", function () {
 
-        if (target) {
-            target.scrollIntoView({
-                behavior: "smooth"
-            });
-        }
+        navLinks.forEach(item => {
+            item.classList.remove("active");
+        });
+
+        this.classList.add("active");
+
     });
 });
 
-// Navbar Shadow
-window.addEventListener("scroll", function () {
+// =========================
+// Smooth Scroll
+// =========================
 
-    const navbar = document.querySelector(".navbar");
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
-    if (!navbar) return;
+    anchor.addEventListener("click", function(e){
 
-    if (window.scrollY > 50) {
+        e.preventDefault();
 
-        navbar.style.background = "rgba(10,15,35,.95)";
-        navbar.style.boxShadow = "0 10px 30px rgba(0,0,0,.35)";
+        const target=document.querySelector(this.getAttribute("href"));
 
-    } else {
+        if(target){
 
-        navbar.style.background = "rgba(255,255,255,.05)";
-        navbar.style.boxShadow = "none";
+            target.scrollIntoView({
 
-    }
+                behavior:"smooth"
 
-});
+            });
 
-// Image Hover Animation
+        }
 
-const image = document.querySelector(".hero-image img");
-
-if(image){
-
-image.addEventListener("mouseenter",()=>{
-
-image.style.transform="scale(1.05)";
-image.style.transition=".4s";
+    });
 
 });
 
-image.addEventListener("mouseleave",()=>{
-
-image.style.transform="scale(1)";
-
-});
-
-}
-
+// =========================
 // Typing Effect
+// =========================
 
-const typingText = [
-"Web Developer",
-"Frontend Developer",
-"Freelancer",
-"Digital Creator"
+const text = [
+    "Web Developer",
+    "Frontend Developer",
+    "Digital Creator",
+    "Freelancer"
 ];
 
 let count = 0;
@@ -75,79 +60,32 @@ let letter = "";
 
 (function type(){
 
-if(count===typingText.length){
+    if(count === text.length){
+        count = 0;
+    }
 
-count=0;
+    currentText = text[count];
+    letter = currentText.slice(0, ++index);
 
-}
+    const element = document.getElementById("typing");
 
-currentText=typingText[count];
+    if(element){
+        element.textContent = letter;
+    }
 
-letter=currentText.slice(0,++index);
+    if(letter.length === currentText.length){
 
-const h2=document.querySelector(".hero-text h2");
+        count++;
+        index = 0;
 
-if(h2){
+        setTimeout(type,1500);
 
-h2.textContent=letter;
+    }
 
-}
+    else{
 
-if(letter.length===currentText.length){
+        setTimeout(type,100);
 
-count++;
-
-index=0;
-
-setTimeout(type,1200);
-
-}else{
-
-setTimeout(type,120);
-
-}
+    }
 
 })();
-
-// Fade In Animation
-
-const observer=new IntersectionObserver((entries)=>{
-
-entries.forEach(entry=>{
-
-if(entry.isIntersecting){
-
-entry.target.style.opacity="1";
-
-entry.target.style.transform="translateY(0)";
-
-}
-
-});
-
-});
-
-document.querySelectorAll("section").forEach(section=>{
-
-section.style.opacity="0";
-
-section.style.transform="translateY(80px)";
-section.style.transition=".8s";
-
-observer.observe(section);
-
-});
-
-// Current Year Footer
-
-const year=document.getElementById("year");
-
-if(year){
-
-year.innerHTML=new Date().getFullYear();
-
-}
-
-// Console Message
-
-console.log("Ijaz Ul Haq Portfolio Loaded Successfully");
