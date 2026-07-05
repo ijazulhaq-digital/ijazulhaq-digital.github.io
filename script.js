@@ -10,9 +10,11 @@ document.querySelectorAll('nav a').forEach(anchor => {
 
 // Button hover effect
 const btn = document.querySelector('.btn');
-btn.addEventListener('mouseover', () => {
-    btn.style.letterSpacing = '1px';
-});
-btn.addEventListener('mouseout', () => {
-    btn.style.letterSpacing = '0px';
-});
+if(btn){
+  btn.addEventListener('mouseover', () => {
+      btn.style.letterSpacing = '1px';
+  });
+  btn.addEventListener('mouseout', () => {
+      btn.style.letterSpacing = '0px';
+  });
+}
