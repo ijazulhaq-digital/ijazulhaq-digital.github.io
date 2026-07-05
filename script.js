@@ -8,13 +8,18 @@ document.querySelectorAll('nav a').forEach(anchor => {
     });
 });
 
-// Button hover effect
-const btn = document.querySelector('.btn');
-if(btn){
-  btn.addEventListener('mouseover', () => {
-      btn.style.letterSpacing = '1px';
-  });
-  btn.addEventListener('mouseout', () => {
-      btn.style.letterSpacing = '0px';
-  });
-}
+// Scroll Animation - جب سکرول کریں تو چیزیں آئیں
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+            setTimeout(() => {
+                entry.target.style.opacity = 1;
+                entry.target.style.transform = 'translateY(0)';
+            }, index * 200); // ہر باکس 0.2 سیکنڈ delay سے
+        }
+    });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.project, h2').forEach(el => {
+    observer.observe(el);
+});
