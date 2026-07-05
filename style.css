@@ -1,138 +1,172 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+/* ========== GOOGLE FONT ========== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap');
+
+/* ========== BASIC SETUP ========== */
+* { 
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box; 
+  font-family: 'Poppins', sans-serif; 
+}
+html { 
+  scroll-behavior: smooth; /* Smooth scrolling */
+}
+body { 
+  background: #050505; /* Dark Background */
+  color: #f1f1f1; /* Light Text */
 }
 
-body {
-    background: #0a0a0a;
-    color: #fff;
+/* ========== NAVBAR ========== */
+nav { 
+  background: rgba(10,10,10,0.9); /* Black with blur */
+  backdrop-filter: blur(10px);
+  padding: 20px; 
+  position: fixed; /* Sticky on top */
+  width: 100%; 
+  top: 0; 
+  z-index: 1000; 
+  text-align: center; 
+  border-bottom: 1px solid #1a1a1a; 
+}
+nav a { 
+  color: #fff; 
+  text-decoration: none; 
+  margin: 0 25px; 
+  font-weight: 600; 
+  font-size: 1rem;
+  transition: 0.3s; 
+}
+nav a:hover { 
+  color: #3b82f6; /* Blue on hover */
 }
 
-/* Navbar */
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 10%;
-    background: #111;
-    position: sticky;
-    top: 0;
+/* ========== HERO / HEADER SECTION ========== */
+header { 
+  background: linear-gradient(135deg, #1e40af 0%, #000 100%); /* Blue to Black Gradient */
+  padding: 160px 20px 120px; 
+  text-align: center; 
+  margin-top: 60px; /* Space for navbar */
+}
+header h1 { 
+  font-size: 3.5rem; 
+  font-weight: 800; 
+  background: linear-gradient(90deg, #3b82f6, #60a5fa); /* Gradient Text */
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent; 
+}
+header p { 
+  font-size: 1.3rem; 
+  color: #bfdbfe; /* Light Blue */
+  margin-top: 15px; 
+}
+.btn { 
+  display: inline-block; 
+  margin-top: 30px; 
+  background: #2563eb; 
+  color: white; 
+  padding: 14px 35px; 
+  border-radius: 50px; /* Round Button */
+  text-decoration: none; 
+  font-weight: 600; 
+  transition: 0.3s; 
+}
+.btn:hover { 
+  background: #1d4ed8; 
+  transform: translateY(-3px); /* Lift effect */
 }
 
-nav h2 {
-    color: #00ff88;
-    font-size: 1.8rem;
-    font-weight: 700;
+/* ========== SECTIONS COMMON ========== */
+section { 
+  padding: 100px 20px; 
+  max-width: 1200px; 
+  margin: auto; 
+}
+h2 { 
+  text-align: center; 
+  font-size: 2.8rem; 
+  margin-bottom: 60px; 
+  color: #60a5fa; /* Heading Blue */
 }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 25px;
+/* ========== PROJECTS SECTION ========== */
+.projects-grid { 
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Responsive Grid */
+  gap: 35px; 
+}
+.project { 
+  background: #111; 
+  padding: 35px; 
+  border-radius: 20px; 
+  border: 1px solid #222; 
+  transition: 0.4s; 
+}
+.project:hover { 
+  transform: translateY(-12px); /* Lift on hover */
+  border-color: #3b82f6; 
+  box-shadow: 0 15px 40px rgba(59,130,246,0.2); /* Glow effect */
+}
+.project h3 { 
+  color: #fff; 
+  font-size: 1.6rem; 
+  margin-bottom: 12px; 
 }
 
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: 500;
-    transition: 0.3s;
+/* ========== CONTACT FORM SECTION ========== */
+#contact { 
+  background: #111; 
+  border-radius: 20px; 
+  padding: 60px; 
+  border: 1px solid #222; 
+}
+input, textarea { 
+  width: 100%; 
+  padding: 16px; 
+  margin: 14px 0; 
+  background: #050505; /* Dark Input */
+  border: 1px solid #333; 
+  border-radius: 12px; 
+  color: white; 
+  font-size: 1rem; 
+}
+input:focus, textarea:focus { 
+  outline: none; 
+  border-color: #3b82f6; /* Blue Border on Focus */
+}
+button { 
+  background: linear-gradient(135deg, #2563eb, #1d4ed8); /* Gradient Button */
+  color: white; 
+  padding: 16px 30px; 
+  border: none; 
+  border-radius: 12px; 
+  font-size: 1.1rem; 
+  font-weight: 700; 
+  cursor: pointer; 
+  width: 100%; 
+  transition: 0.3s; 
+}
+button:hover { 
+  transform: scale(1.03); /* Zoom effect */
 }
 
-nav ul li a:hover {
-    color: #00ff88;
+/* ========== FOOTER ========== */
+footer { 
+  background: #000; 
+  color: #666; 
+  text-align: center; 
+  padding: 50px 20px; 
+  margin-top: 80px; 
+  border-top: 1px solid #111; 
+}
+footer a { 
+  color: #60a5fa; 
+  text-decoration: none; 
 }
 
-/* Hero */
-.hero {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 80px 10%;
-}
-
-.hero-text h2 {
-    font-size: 2.5rem;
-    color: #00ff88;
-}
-.hero-text h3 {
-    font-size: 1.5rem;
-    margin: 10px 0;
-}
-
-.btn {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 12px 25px;
-    background: #00ff88;
-    color: #000;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 600;
-}
-
-.hero-image img {
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    border: 4px solid #00ff88;
-    object-fit: cover;
-    box-shadow: 0 0 30px #00ff88;
-}
-
-/* Sections */
-section {
-    padding: 60px 10%;
-    text-align: center;
-}
-
-section h2 {
-    color: #00ff88;
-    font-size: 2.2rem;
-    margin-bottom: 20px;
-}
-
-.project {
-    background: #1e1e1e;
-    padding: 20px;
-    margin: 15px auto;
-    border-radius: 10px;
-    max-width: 600px;
-    border: 1px solid #00ff88;
-}
-
-/* Form */
-form {
-    max-width: 500px;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-form input, form textarea {
-    padding: 12px;
-    border-radius: 8px;
-    border: none;
-    background: #1e1e1e;
-    color: #fff;
-}
-
-form button {
-    padding: 12px;
-    background: #00ff88;
-    color: #000;
-    border: none;
-    border-radius: 8px;
-    font-weight: 600;
-    cursor: pointer;
-}
-
-/* Footer */
-footer {
-    background: #000;
-    padding: 20px;
-    text-align: center;
-    color: #aaa;
+/* ========== MOBILE RESPONSIVE ========== */
+@media(max-width: 768px) {
+  header h1 { font-size: 2.5rem; }
+  nav a { margin: 0 10px; font-size: 0.9rem; }
+  #contact { padding: 30px; }
+  h2 { font-size: 2rem; }
 }
