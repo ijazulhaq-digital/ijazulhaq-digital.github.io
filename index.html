@@ -1,85 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ijaz Ul Haq - Web Developer</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ijaz Ul Haq - Web Developer</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f4f4f4; }
+    header { background: #333; color: white; padding: 20px; text-align: center; }
+    section { padding: 40px; max-width: 900px; margin: auto; background: white; margin-top: 20px; border-radius: 8px; }
+    .project { margin-bottom: 20px; padding: 15px; border: 1px solid #ddd; border-radius: 5px; }
+    input, textarea { width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px; }
+    button { background: #333; color: white; padding: 12px 20px; border: none; border-radius: 5px; cursor: pointer; }
+    button:hover { background: #555; }
+  </style>
 </head>
 <body>
 
-    <!-- Navbar -->
-    <nav>
-        <h2>Ijaz</h2>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+  <header>
+    <h1>Ijaz Ul Haq</h1>
+    <p>Web Developer | Portfolio</p>
+  </header>
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="hero-text">
-            <h1>Hello, I'm</h1>
-            <h2>Ijaz Ul Haq</h2>
-            <h3>Web Developer & Digital Creator</h3>
-            <p>I build modern, responsive and premium websites using HTML, CSS & JavaScript</p>
-            <a href="#contact" class="btn">Hire Me</a>
-        </div>
-        <div class="hero-image">
-            <img src="your-photo.jpg" alt="Ijaz Ul Haq">
-        </div>
-    </section>
+  <section id="projects">
+    <h2>My Projects</h2>
+    <div class="project">
+      <h3>Business Website</h3>
+      <p>Modern multi-page website for local business with contact form</p>
+    </div>
+    <div class="project">
+      <h3>WordPress Website</h3>
+      <p>Custom WordPress site with premium theme customization and plugins</p>
+    </div>
+  </section>
 
-    <!-- About Section -->
-    <section id="about">
-        <h2>About Me</h2>
-        <p>I am a passionate Web Developer and Designer from Peshawar, Pakistan. I specialize in building modern, responsive and user-friendly websites using HTML, CSS, JavaScript, and WordPress. I have experience in creating Login Pages, Landing Pages, E-commerce Websites, and Business Portfolios. My goal is to help brands grow online with clean and premium design.</p>
-    </section>
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form id="contactForm" action="https://formspree.io/f/xnjkwnze" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
 
-    <!-- Skills Section -->
-    <section id="skills">
-        <h2>My Skills</h2>
-        <p>HTML5, CSS3, JavaScript, WordPress, Responsive Design, GitHub</p>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects">
-        <h2>My Projects</h2>
-        <div class="project">
-            <h3>Login Page Design</h3>
-            <p>Responsive and secure login & signup page built with HTML, CSS and JavaScript</p>
-        </div>
-        <div class="project">
-            <h3>Business Website</h3>
-            <p>Modern multi-page website for local business with contact form and Google Maps</p>
-        </div>
-        <div class="project">
-            <h3>WordPress Website</h3>
-            <p>Custom WordPress site with premium theme customization and plugin setup</p>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <form id="contactForm" action="https://formspree.io/f/your-form-id" method="POST">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>© 2026 Ijaz Ul Haq. All Rights Reserved. | Made with ❤️ in Peshawar</p>
-    </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
